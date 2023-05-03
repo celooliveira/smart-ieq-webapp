@@ -1,0 +1,27 @@
+{
+  "name": "smart-ieq-webapp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vercel dev",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@element-plus/theme-chalk": "^2.2.6",
+    "axios": "^0.27.2",
+    "element-plus": "^2.2.14",
+    "http-proxy-middleware": "^2.0.6",
+    "vue": "^3.2.37",
+    "vue-router": "^4.1.3",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^5.0.8",
+    "@vue/cli-plugin-router": "^5.0.8",
+    "@vue/cli-plugin-vuex": "^5.0.8",
+    "@vue/cli-service": "^5.0.8",
+    "@vue/eslint-config-standard": "^8.0.1",
+    "vercel": "^28.1.0"
+  }
+}
