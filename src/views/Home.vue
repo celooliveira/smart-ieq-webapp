@@ -18,10 +18,13 @@
   </div>
   <div id="devices">
     <div v-for="device in devicesSorted" :key="device.id">
-      <el-card class="device" :style="device.data.online === false ? 'filter: opacity(0.65) grayscale(1);' : ''">
+      <el-card v-if="device.name != 'ROTEADORES NAVE'" class="device" :style="device.data.online === false ? 'filter: opacity(0.65) grayscale(1);' : ''">
         <el-tooltip effect="light" :content="device.type" :offset="-20"
           :visible-arrow="false">
-          <el-avatar :src="`/device_icons/${device.type}.png`" shape="square">
+          <el-avatar v-if="device.name.includes('PTZs')" :src="`/device_icons/${device.type}.png`" shape="square">
+            <img src="/device_icons/default.png"/>
+          </el-avatar>
+          <el-avatar v-if="device.name.includes('PTZ ')" :src="`/device_icons/ptz.png`" shape="square">
             <img src="/device_icons/default.png"/>
           </el-avatar>
         </el-tooltip>
